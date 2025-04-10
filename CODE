@@ -1,0 +1,31 @@
+/**
+ * Function to sort job applications by appliedDate in descending order.
+ * 
+ * @param {Array} jobs - Array of job application objects.
+ * @returns {Array} - Sorted array with latest appliedDate first.
+ */
+function sortJobsByDate(jobs) {
+  return jobs.sort((a, b) => new Date(b.appliedDate) - new Date(a.appliedDate));
+}
+
+// Example usage:
+const jobApplications = [
+  {
+    company: "Google",
+    role: "SDE Intern",
+    appliedDate: "2025-04-01",
+  },
+  {
+    company: "Amazon",
+    role: "Frontend Intern",
+    appliedDate: "2025-03-15",
+  },
+  {
+    company: "Meta",
+    role: "Backend Intern",
+    appliedDate: "2025-04-05",
+  }
+];
+
+const sortedJobs = sortJobsByDate(jobApplications);
+console.log(sortedJobs);
